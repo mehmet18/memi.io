@@ -1,1 +1,337 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medine & Mehmet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
 
+    header {
+      background-color: rgba(255, 192, 203, 0.3);
+      padding: 20px;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #d63384;
+    }
+
+    .profile img {
+      width: 200px;
+      border-radius: 50%;
+      border: 5px solid #ffb6c1;
+      box-shadow: 0 0 20px pink;
+      margin-top: 20px;
+    }
+
+    .heart {
+      font-size: 2em;
+      color: red;
+    }
+
+    section {
+      padding: 30px;
+    }
+
+    .info {
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #ffcccc;
+    }
+
+    h3 {
+      color: #d63384;
+      margin-bottom: 10px;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin: 10px;
+      font-size: 1.2em;
+      color: #d63384;
+      text-decoration: none;
+      border: 2px solid #d63384;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .socials a:hover {
+      background-color: #d63384;
+      color: white;
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      z-index: 9999;
+      color: white;
+      font-size: 1.5em;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+
+    #musicBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff66a3;
+      border: none;
+      border-radius: 50%;
+      padding: 15px 20px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff99c2;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    #musicBtn:hover {
+      transform: scale(1.1);
+      background-color: #ff4d94;
+    }
+
+    @keyframes pulseHeart {
+      0% { transform: scale(1); box-shadow: 0 0 10px #ff66a3; }
+      50% { transform: scale(1.1); box-shadow: 0 0 20px #ff99c2; }
+      100% { transform: scale(1); box-shadow: 0 0 10px #ff66a3; }
+    }
+
+    .playing {
+      animation: pulseHeart 1.5s infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Medine & Mehmet</h1>
+  </header>
+
+  <div class="profile">
+    <img src="c3c8923643862ba6aaa5c714e0d62217_1700093461667_0.jpg" alt="Medine & Mehmet">
+  </div>
+
+  <section class="info">
+    <h2>Düğüne Kalan Süre</h2>
+    <div id="live-countdown" style="font-size: 1.8em; color: #d63384;"></div>
+  </section>
+
+  <section class="info">
+    <h2>Hakkımızda</h2>
+
+    <!-- 50 romantik cümle burada başlıyor -->
+    <div id="love-quotes">
+      <h3>Medine ve Mehmet göz göze geldiğinde dünya duruyor...</h3>
+      <hr />🥰😍
+      <h3>Mehmet’in kalbi her atışında Medine’nin adını fısıldıyor...</h3>
+      <hr />😍😍
+      <h3>Medine'nin gülüşü Mehmet için cennet kapısı gibi açılıyor...</h3>
+      <hr />😘😍
+      <h3>Mehmet’in her duasında Medine'nin adı geçiyor...</h3>
+      <hr />❣️❤️‍🔥
+      <h3>Medine ve Mehmet'in yolları aşkın çizdiği kaderle birleşti...</h3>
+      <hr />👄🫦
+      <h3>Mehmet, Medine'nin ellerini tuttuğunda zaman duruyor...</h3>
+      <hr />😎😎
+      <h3>Medine'nin varlığı Mehmet’in ruhuna huzur veriyor...</h3>
+      <hr />🫣😇💋
+      <h3>Mehmet, Medine'nin gözlerinde geleceği görüyor...</h3>
+      <hr />🫅💏
+      <h3>Medine ve Mehmet’in kalpleri aynı melodide çarpıyor...</h3>
+      <hr />🌷🌼
+      <h3>Mehmet’in sevgisi Medine’yi yıldızlardan bile parlak gösteriyor...</h3>
+      <hr />🪷🌸
+      <h3>Medine ve Mehmet’in aşkı gökyüzüne şiir yazdırıyor...</h3>
+      <hr />🌹💐
+      <h3>Mehmet için Medine sadece bir isim değil, bir yaşam sebebi...</h3>
+      <hr />🌞☀️🌠
+      <h3>Medine'nin sesi Mehmet için en güzel melodiden bile değerli...</h3>
+      <hr />🌈🌀🌬️
+      <h3>Mehmet, Medine'nin adını her nefeste anıyor...</h3>
+      <hr />🎆🎇🎁
+      <h3>Medine ve Mehmet aşkı, her çiçeğe ilham veriyor...</h3>
+      <hr />👛🪭🧿
+      
+      <h3>Mehmet’in gözleri Medine'yi gördüğünde ışıldıyor...</h3>
+      <hr />💐🎇🌬️
+      <h3>Medine'nin gülüşü Mehmet’in kalbinde bahar estiriyor...</h3>
+      <hr />🌬️⛅🌤️🌞
+      <h3>Mehmet ve Medine'nin kalpleri birbirine mühürlü...</h3>
+      <hr />☀️🌹💏
+      <h3>Medine, Mehmet’in hayatında parlayan en güzel yıldız...</h3>
+      <hr />🌼🧿
+      <h3>Mehmet, Medine için sonsuzluğu bile beklemeye razı...</h3>
+      <hr />🌀🌈
+      <h3>Medine ve Mehmet'in aşkı dillerde destan oluyor...</h3>
+      <hr />💐🎇
+      <h3>Mehmet'in her sabahı Medine'nin adını anarak başlıyor...</h3>
+      <hr />🌼👛
+      <h3>Medine'nin varlığı Mehmet için en değerli hediyedir...</h3>
+      <hr />🎁🪭🌬️
+      <h3>Mehmet’in hayalleri Medine ile daha anlamlı...</h3>
+      <hr />🌼🧿
+      <h3>Medine ve Mehmet’in aşkı zamana meydan okuyor...</h3>
+      <hr />👸🫦👄
+      <h3>Mehmet’in yüreği Medine’nin sevgisiyle dolup taşıyor...</h3>
+      <hr />🌞🌤️
+      <h3>Medine, Mehmet’in içindeki en saf duyguyu ortaya çıkarıyor...</h3>
+      <hr />🌹🌹
+      <h3>Mehmet’in kalbi sadece Medine için atıyor...</h3>
+      <hr />🪭👛
+      <h3>Medine’nin adı Mehmet’in dudaklarında şiire dönüşüyor...</h3>
+      <hr />☀️🎇
+      <h3>Mehmet, Medine'nin sevgisiyle her fırtınayı aşar...</h3>
+      <hr />🌼🧿
+      <h3>Medine ve Mehmet’in aşkı sonsuz bir masal gibi...</h3>
+      <hr />🌀🌀
+      <h3>Mehmet’in yolu Medine'ye çıkan en güzel yoldur...</h3>
+      <hr />💋💋
+      <h3>Medine’nin bir bakışı Mehmet’i büyülüyor...</h3>
+      <hr />🫅🫅
+      <h3>Mehmet ve Medine’nin aşkı güneşi kıskandırıyor...</h3>
+      <hr />🌈🌷
+      <h3>Medine’nin her sözü Mehmet’in kalbinde iz bırakıyor...</h3>
+      <hr />💐💐
+      <h3>Mehmet’in her şarkısı Medine için yazılmış gibi...</h3>
+      <hr />🌤️🧿
+      <h3>Medine ve Mehmet’in elleri kenetlendiğinde dünya güzelleşiyor...</h3>
+      <hr />💏💏
+      <h3>Mehmet’in en büyük mucizesi Medine’dir...</h3>
+      <hr />🌬️🌹
+      <h3>Medine’nin gözyaşı Mehmet’in yüreğini sarsar...</h3>
+      <hr />🎁🎁
+      <h3>Mehmet ve Medine bir ömür boyu aşkın ta kendisi olacak...</h3>
+      <hr />🎇🌀
+      <h3>Medine'nin kokusu Mehmet'in hafızasına kazınmış...</h3>
+      <hr />👄👄
+      <h3>Mehmet’in duaları Medine ile tamam olur...</h3>
+      <hr />⛅🪭
+      <h3>Medine’nin sesi Mehmet’in uykularını huzura kavuşturur...</h3>
+      <hr />🍑🍑
+      <h3>Mehmet’in en güzel anısı Medine ile geçen zamandır...</h3>
+      <hr />🌼🌼
+      <h3>Medine ve Mehmet’in aşkı gökyüzünde yazılıdır...</h3>
+      <hr />🌏🌏
+      <h3>Mehmet’in hayal dünyasında sadece Medine vardır...</h3>
+      <hr />🔒📸
+      <h3>Medine’nin varlığı Mehmet’in her karanlığına ışık olur...</h3>
+      <h3>Mehmet’in her gülüşü Medine’nin kalbine dokunur...</h3>
+      <hr />🌏🔒🔏📸🗽🌼🍑🪭⛅🧿☀️🌈🌷💐🌤️🌞🌀👄
+    </div>
+    <!-- 50 romantik cümle burada bitiyor -->
+
+  </section>
+
+  <section class="info">
+    <h2>Düğün Davetiyesi</h2>
+    <p>
+      Sevgili Dostlarımız,<br><br>
+      Hayatlarımızı birleştirme kararımızı sizlerle paylaşmanın heyecanı içindeyiz.<br>
+      Bu mutlu günümüzde sizleri de aramızda görmekten onur duyarız.<br><br>
+      <strong>Kına Gecesi:</strong><br>
+      5 Temmuz 2025 - Saat: 19:00<br><br>
+      <strong>Düğün:</strong><br>
+      6 Temmuz 2025 - Saat: 19:00<br><br>
+      <strong>Yer:</strong> Gaziantep Saltanat Düğün Salonu
+    </p>
+    <div class="heart">♥ ♥ ♥</div>
+  </section>
+
+  <section class="info socials">
+    <h2>Bizi Takip Edin</h2>
+    <a href="https://www.instagram.com/medine_skr27?igsh=eXoxZG13YjQyNnlv" target="_blank">Medine'nin Instagram'ı</a>
+    <a href="https://www.instagram.com/memo.sakir?igsh=ajR0eTd6Z3NoNXdy" target="_blank">Mehmet'in Instagram'ı</a>
+  </section>
+
+  <section class="info">
+    <h2>Ziyaretçi Defteri</h2>
+    <textarea id="guestNote" placeholder="Mesajınızı buraya yazın..." rows="4" style="width: 90%; padding: 10px; border-radius: 10px; border: 1px solid #ccc;"></textarea>
+    <br><br>
+    <button onclick="addNote()" style="padding: 10px 20px; border-radius: 20px; background-color: #d63384; color: white; border: none; cursor: pointer;">Gönder</button>
+    <div id="notesArea" style="margin-top: 20px; text-align: left;"></div>
+  </section>
+
+  <audio id="weddingMusic" loop>
+    <source src="Ezhel.m4a" type="audio/mpeg">
+    Tarayıcınız müziği desteklemiyor.
+  </audio>
+  <button id="musicBtn" onclick="toggleMusic()">♥</button>
+
+  <script>
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.innerHTML = '❄';
+      snowflake.style.left = Math.random() * window.innerWidth + 'px';
+      snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      snowflake.style.opacity = Math.random();
+      snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+      document.body.appendChild(snowflake);
+      setTimeout(() => snowflake.remove(), 10000);
+    }
+    setInterval(createSnowflake, 300);
+
+    const countdownTarget = new Date("2025-07-04T09:00:00").getTime();
+    const countdownEl = document.getElementById("live-countdown");
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countdownTarget - now;
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        countdownEl.innerHTML = `${days} gün, ${hours} saat, ${minutes} dakika, ${seconds} saniye kaldı`;
+      } else {
+        countdownEl.innerHTML = "Düğün başladı!";
+      }
+    }, 1000);
+
+    function addNote() {
+      const note = document.getElementById("guestNote").value;
+      if (note.trim() !== "") {
+        const noteEl = document.createElement("p");
+        noteEl.style.background = "#fff0f5";
+        noteEl.style.padding = "10px";
+        noteEl.style.borderRadius = "10px";
+        noteEl.style.margin = "10px 0";
+        noteEl.innerText = note;
+        document.getElementById("notesArea").appendChild(noteEl);
+        document.getElementById("guestNote").value = "";
+      }
+    }
+
+    const music = document.getElementById("weddingMusic");
+    const musicBtn = document.getElementById("musicBtn");
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        musicBtn.classList.add("playing");
+      } else {
+        music.pause();
+        musicBtn.classList.remove("playing");
+      }
+    }
+  </script>
+
+</body>
+  </html>
